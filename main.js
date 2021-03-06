@@ -1,9 +1,10 @@
 
 function chamaHome(event){
     event.preventDefault()
-    user = document.querySelector("#usuario")
-    senha = document.querySelector("#senha")
+    let user = document.querySelector("#usuario")
+    let senha = document.querySelector("#senha")
     if(user.value === "admin" && senha.value === "admin"){
+        localStorage.setItem("user", user.value)
         window.location.href="index.html"
     } else{
         alert("Usuário e/ou senha incorretos!")
@@ -11,4 +12,10 @@ function chamaHome(event){
         senha.value = ""
     }
     
+}
+
+function setNomeUser(){
+    let user = localStorage.getItem("user")
+    let userSpan = document.querySelector("#user") 
+    userSpan.innerHTML = user
 }
