@@ -112,19 +112,41 @@ class Store {
         Store.addCliente(cliente)
 
         Task.limparCampos()
+        alert("Salvo com sucesso!")
       }
 
       function deleteAtualiza(e) {
         let linhaSelecionada = e.target.parentElement.parentElement
         let cpf = linhaSelecionada.cells[3].innerHTML
         if(e.target.classList.contains('excluir')) {
-            if (confirm('Tem certeza que deseja excluir?')){
+            if (confirm('Tem certeza que deseja excluir esse registro?')){
 
                 Store.removerCliente(cpf)
                 Task.excluirCliente(e.target)
+                alert("Removido com sucesso!")
                 
             }
-            
+        }
+
+        if(e.target.classList.contains('atualizar')) {
+            if (confirm('Tem certeza que deseja alterar esse registro?')){
+
+                let nome = linhaSelecionada.cells[0].innerHTML
+                let email = linhaSelecionada.cells[1].innerHTML
+                let dataNasc = linhaSelecionada.cells[2].innerHTML
+                let cpf = linhaSelecionada.cells[3].innerHTML
+                let endereco = linhaSelecionada.cells[4].innerHTML
+                let telefone = linhaSelecionada.cells[5].innerHTML
+                let sexo = linhaSelecionada.cells[6].innerHTML
+
+                let cliente = new Cliente(nome, email, dataNasc, cpf, endereco, telefone, sexo);
+                
+                Store.atualizarCliente(cliente, cpf)
+                alert("Atualizado com sucesso!")
+                document.querySelector("#lista-clientes").innerHTML = ""
+                Task.listarClientes()
+                
+            }
         }
         
       }
@@ -175,8 +197,11 @@ function editavel(td){
     })
 }
 
-
-
-
-
-
+function SomenteNumero(e){
+    var tecla=(window.event)?event.keyCode:e.which;   
+    if((tecla>47 && tecla<58)) return true;
+    else{
+    	if (tecla==8 || tecla==0) return true;
+	else  return false;
+    }
+}
