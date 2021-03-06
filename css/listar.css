@@ -18,20 +18,23 @@
 table{
     width: 100%;
     border-spacing: 0 10px;
+    
 }
 
 table th{
     background: #d0d2da;
     font-weight: 600;
-    padding: 15px 30px;
+    padding: 5px 15px;
     text-align: left;
+    font-size:15px;
 
 }
 table td{
     background: #e3e5ec;
-    padding: 15px 30px;
+    padding: 5px 15px;
     font-weight: normal;
     cursor: pointer;
+    font-size:15px;
 }
 
 
@@ -50,6 +53,22 @@ table tbody tr td:first-child{
 table thead tr th:last-child,
 table tbody tr td:last-child{
     border-radius: 0 5px 5px 0;
+}
+
+.icon-atualizar{
+    width: 25px;
+    opacity: 0.7;
+}
+.icon-excluir{
+    width: 25px;
+    opacity: 0.7;
+}
+
+.icon-atualizar:hover{
+    opacity: 1;
+}
+.icon-excluir:hover{
+    opacity: 1;
 }
 
 .voltar{
@@ -74,4 +93,8 @@ table tbody tr td:last-child{
 
 .voltar a:hover{
     background: #db4b04;
+}
+
+.celulaEmEdicao{
+    background: #68e09e;
 }

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/listar.css">
 </head>
-<body>
+<body onload="Task.listarClientes()">
     <main>
         <div class="content">
             <h2>Lista de Clientes</h2>
@@ -22,10 +22,24 @@
                         <th>Endereço</th>
                         <th>Telefone</th>
                         <th>Sexo</th>
+                        <th></th>
+                        <th ></th>
                     </tr>
                 </thead>
-                <tbody id="lista-clientes">
-                    
+                <tbody id="lista-clientes" onclick="deleteAtualiza(event)">
+                    <!--
+                    <tr>
+                        <td ondblclick="teste(this)"> Eudemir Vieira</td>
+                        <td>ewdemy@hotmail.com</td>
+                        <td>05-08-1986</td>
+                        <td>02471525369</td>
+                        <td>Fogareiro City</td>
+                        <td>(88)9 8129-6223</td>
+                        <td>Masculino</td>
+                        <td><img class="icon-atualizar" src="./img/refresh-page-option.svg" alt="ícone atualizar"></td>
+                        <td><img class="icon-excluir" src="./img/trash.svg" alt="ícone excluir"></td>
+                    </tr>
+                    -->
                 </tbody>
             </table>
             <div class="voltar">
