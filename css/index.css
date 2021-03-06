@@ -1,0 +1,105 @@
+.wrapper{
+    width: 800px;
+    height: 300px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+    
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.links{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sair{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.sair a{
+    color: #fff;
+    background: #e92929;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    width: 10%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sair a:hover{
+    background: #c51717;
+}
+
+div h2{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #363f5f;
+}
+
+div h2 span{
+    color: #fe5c0a;
+    font-size: 20px;
+}
+
+.adicionar{
+    width: 35%;
+    height: 35%;
+    background: #fe5c0a;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.listar{
+    width: 35%;
+    background: #fff;
+    color: #fe5c0a;
+    height: 35%;
+    border: solid 2px #fe5c0a;
+    border-radius: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.adicionar:hover{
+    background: #db4b04;
+}
+
+.listar:hover{
+    background: #ebecf0e7;
+}
+.adicionar img{
+    width:50px;
+}
+
+.listar img{
+    width:50px;
+}
