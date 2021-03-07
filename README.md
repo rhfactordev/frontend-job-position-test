@@ -26,3 +26,5 @@ Esperamos analisar alguns comportamentos, tais como:
 
 ## Importante
 - Deixe evidente seu e-mail de contato e nome.
+
+>nota: As atualizações começam do dia 07 ao meio dia pois estava utilizando um repositório pessoal anteriormente
