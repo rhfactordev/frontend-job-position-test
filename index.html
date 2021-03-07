@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    <title>Sistema de Cadastro De Cliente.</title>
+    <style>
+        body {
+            background-image: url("fundo.jpg");
+        }
+        div.abas nav a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            position: left;
+            padding: 30px;
+            background-color: black;
+        }
+        div.abas div {
+        color: black;
+        background-color: white;
+        padding: 15px;
+        display: none;
+        }
+        div.abas div:target{
+            display: block;
+        }
+    </style>
+    	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/9126/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("SUCESSO:)")
+				},
+				error: function(){
+					alert("Falha :(")
+				}
+			});
+		}
+	</script>
+    </head>
+    <body>
+        <div class="abas">
+            <nav>
+                <a href="#aba1">Dados do Cliente</a>
+                <a href="#aba2">Sobre o Cliente </a>
+                <a href="#aba3">Enviar</a>
+            </nav>
+            <div id="aba1">
+                <form id="myForm">
+               <p>
+                <label for="nome">Nome da Cliente</label>
+                <input type="text" id="nomeid" placeholder="" required="required" name="nome" />
+            <br>
+    <br>
+    <br>
+                <label for="fone">Telefone</label>
+                <input type="tel" id="Telefone paRa contato" required="required" name="fone" />
+            <br>
+    <br>
+    <br>
+                <label for="email">Email</label>
+                <input type="email" id="emailid" required="required" name="email" />
+               <br>
+        <br>
+                <label for="email">Endereço</label>
+                <input type="text" id="Endereço"  required="required" name="Endereço" />
+            <br>
+        <br>
+    <br>
+                <label for="email">Documento</label>
+                <input type="text" id="CPF"  required="required" name="Documento" />
+            <br>
+    <br>
+    <br>
+                <label for="email">Cidade</label>
+                <input type="text" id="Endereço"  required="required" name="Cidade" />
+            <br>
+    <br>
+    <br>
+                <label for="email">Estado</label>
+                <input type="text" id="ESTaDO"  required="required" name="Estado" />
+            </p> 
+              
+                
+            </div>
+            <div id="aba2">
+                <label for="email">Serviço Prestado</label>
+                <input type="text" id="Prestado"  name="Serviço" />
+            <br>
+    <br>
+    <br>              
+     <label for="email">Caracteristicas dos Cliente</label>
+    <input type="text" id="Prestado"  name="Caracteristicas" />
+<br>
+<br>
+<br>
+<label for="email">Responsável Pela Contato</label>
+<input type="text" id="Prestado"  name="ResponsávelCONTaTO" />
+<br>
+<br>
+<br>  
+<label for="email">Telefone do Responsável</label>
+<input type="text" id="Prestado"  name="TELRESPONSaVEL" />
+<br>
+<br>
+<br>      
+<label for="email">Orçamento</label>
+<input type="text" id="Prestado"  name="Orçamento" />
+<br>
+<br>
+<br>
+  <label for="email">OBs Sobre o cliente</label>
+<input type="text" id="Prestado"  name="OBSCLIENTE" />
+<br>
+<br> 
+<br>     
+</div>
+            <div id="aba3">
+              </form>      	
+              <button onclick='SubForm()'>Finalizar Cadastro</button>
+</button>
+
+                <p>Feito por Bruno</p>
+                <p>brunoasnunes@hotmail.com</p>
+                <p>EM HTML5 CSS E JS SEM Usar php</p>
+                <p>Sistema desmonstrivo .</p>
+
+          </div>
+        </div>
+    </body>
+    
+</html>
