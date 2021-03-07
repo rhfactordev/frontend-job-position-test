@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="script.js" defer></script>
+  </head>
+  <body id="body">
+    <div id="container">
+      <div id="header">
+        <h1 id="title">Cadastro de Clientes</h1>
+      </div>
+
+      <form id="form">
+        <div id="grupo">
+          <div id="campo">
+            <strong for="nome">Nome</strong>
+            <input type="text" name="nome" id="nome" required />
+          </div>
+
+          <div id="campodireita">
+            <strong for="sobrenome">Sobrenome</strong>
+            <input type="text" name="sobrenome" id="sobrenome" required />
+          </div>
+        </div>
+
+        <div id="grupo">
+          <div id="campo">
+            <strong for="cpf">CPF</strong
+            ><input name="cpf" type="text" id="cpf" maxlength="11" required />
+          </div>
+
+          <div id="campodireita">
+            <strong for="telefone">Telefone</strong>
+            <input name="telefone" id="telefone" maxlength="11" required />
+          </div>
+        </div>
+
+        <div id="campo">
+          <strong for="email">Email</strong>
+          <input type="email" name="email" id="email" required />
+        </div>
+
+        <div id="campo">
+          <strong>Gênero</strong>
+          <select id="genero">
+            <option value="feminino">Feminino</option>
+            <option value="masculino">Masculino</option>
+            <option value="outros">Prefiro não informar</option>
+          </select>
+        </div>
+
+        <div id="campo">
+          <strong for="senha">Senha</strong>
+          <input
+            type="password"
+            name="senha"
+            id="senha"
+            minlength="6"
+            required
+          />
+        </div>
+
+        <div id="botaoArea">
+          <button id="botao" type="submit"><strong>Cadastrar</strong></button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
