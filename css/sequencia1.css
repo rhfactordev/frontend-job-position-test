@@ -1,13 +1,27 @@
- body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    color: rgb(250, 240, 255);
+    border: none;
+} 
+
+label:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+body {
     background-color: rgb(24, 24, 27);
     font: normal 14pt;
-    font-family: Helvetica, sans-serif;
 }
 
 .container {
     display: flex;
     flex-direction: row; 
     height: 95vh;
+    padding: 1%;
 }
 
 #logo { /* Imagem para ser adicionada depois */
@@ -18,9 +32,13 @@
     flex: 1;
     background: rgb(31, 31, 35);
     border-radius: 10px; /*Deixa a borda da seção arredondada*/
-    padding: 2%; /*Espaço entre Texto e Borda*/
-    color: rgb(250, 240, 255);
+    padding: 3%; /*Espaço entre Texto e Borda*/
     margin-left: auto;
+}
+
+.tit {
+    text-align: center;
+    margin-bottom: 3%;
 }
 
 .formulario-container {
@@ -29,23 +47,48 @@
 }
 
 p {
-    text-align: center;
+    padding-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
     border: none;
 }
 
-#cadbut {
+.campoF {
+    width: 100%;
+    margin-right: auto;
+    font-weight: bold;
+}
+
+.termos {
+    width: 100%;
+    margin-right: auto;
+    font-weight: lighter;
+}
+
+a { /* Links */
+    color: rgb(145, 70, 255)
+}
+
+.blocoin {
+    width: 100%;
+    padding: 5px;
+    border-bottom: 2px solid rgb(250, 240, 255);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.cadbut {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; 
+    margin-right: auto; 
     margin-left: auto;
     border-radius: 20px;
     padding: 10px;
-    width: 150px;
+    width: 120px;
+    background-color: rgb(145, 70, 255);
     box-sizing: border-box;
     border: none;
 }

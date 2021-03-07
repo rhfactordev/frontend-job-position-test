@@ -22,16 +22,46 @@
 
             <div class="formulario-container">
                 <p>
-                    <strong>Nome completo: </strong><br>
-                    <input type="text" name="" id="ncomp">
+                    <label for="ncomp" class="campoF">Nome Completo:</label>
+                    <input type="text" name="ncomp" id="ncomp" placeholder="Digite seu nome" class="blocoin">
                 </p>
                 
                 <p>
-                    <strong>e-mail: </strong><br>
-                    <input type="text" name="" id="email">
+                    <label for="email" class="campoF">email:</label>
+                    <input type="text" name="email" id="email" placeholder="Digite seu email" class="blocoin">
                 </p>
+
+                <p>
+                    <label for="cpf" class="campoF">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" class="blocoin">
+                </p>
+
+                <p>
+                    <label for="pass" class="campoF">Senha:</label>
+                    <input type="password" name="pass" id="pass" placeholder="Digite uma senha com mais de 5 caractéres" class="blocoin">
+                </p>
+
+                <p>
+                    <label for="cpass" class="campoF">Confirmação de Senha:</label>
+                    <input type="password" name="cpass" id="cpass" placeholder="Digite a senha novamente" class="blocoin">
+                </p>
+
+                <p>
+                    <input type="checkbox" name="termos" class="termos">
+                    <label for="termos">Li e concordo com os <a href="#">termos de uso</a>.</label>
+                </p>
+
                 <br>
-                <input type="button" value="Cadastrar" id="cadbut" onclick="Cadastrar()">    
+                <div class="besq">
+                    <input type="button" value="Cadastrar" class="cadbut" onclick="Cadastrar(  document.getElementById('ncomp'), 
+                                                                                            document.getElementById('email'), 
+                                                                                            document.getElementById('cpf'), 
+                                                                                            document.getElementById('pass'), 
+                                                                                            document.getElementById('cpass'))"> 
+                </div>
+                <div class="bdir">
+                    <input type="button" value="Avaçar" class="cadbut" onclick="Redirect()">
+                </div>
             </div>
         </div>
     </div>
