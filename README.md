@@ -1,4 +1,6 @@
 # Frontend - Intern - Job Position Test
+## Nome: Antonio Eudemir Vieira da Cruz
+## Email: ewdemy@hotmail.com
 Que legal que você chegou até aqui, será um prazer trabalharmos juntos nessa empreitada! 
 Esse projeto teste consiste em desenvolver um pequeno cadastro de cliente utilizando CSS, HTML5, Javascript e GIT. 
 Esse projeto não será utilizado comercialmente, mas sim, para fim de avaliação.

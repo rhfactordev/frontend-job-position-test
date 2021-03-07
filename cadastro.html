@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casdastro - SGC</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+</head>
+<body>
+    <main>
+        <form action="#" method="post" id="cadastro-form" onsubmit="enviarForm(event)">
+            <h1>Cadastro de Cliente</h1>
+            <div class="input-group">
+                <label for="nome">Nome:</label><input type="text" name="nome" id="nome" required placeholder="Digite seu nome" minlength="3" maxlength="60" class="input">
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label><input type="email" name="email" id="email" required placeholder="Digite seu email" class="input">
+            </div>
+            <div class="input-group">
+                <label for="data-nasc">Data de nascimento:</label><input type="date" name="data-nasc" id="data-nasc" class="input">
+            </div>
+            <div class="input-group">
+                <label for="cpf">CPF:</label><input type="text" name="cpf" id="cpf" required placeholder="Digite seu CPF" class="input" minlength="11" maxlength="11"  onkeypress="return SomenteNumero(event)">
+            </div>
+            <div class="input-group">
+                <label for="endereco">Endereço:</label><input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço" class="input">
+            </div>
+            <div class="input-group">
+                <label for="telefone">Telefone:</label><input type="tel" name="telefone" id="telefone" placeholder="(99)9 9999-9999" class="input">
+            </div>
+            <div class="input-group">
+                <label>Sexo:</label><br>
+                <input type="radio" id="masculino" name="genero" value="Masculino" required> <label for="masculino">Masculino</label> <br>
+                <input type="radio" id="feminino" name="genero" value="Feminino"> <label for="feminino">Feminino</label><br>
+                <input type="radio" id="outro" name="genero" value="Outro"> <label for="outro">Outro</label>
+            </div>
+            <div class="input-group botoes">
+                <a href="home.html">Cancelar</a>
+                <input type="submit" value="Salvar">
+            </div>
+        </form>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
