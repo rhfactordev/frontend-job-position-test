@@ -7,11 +7,6 @@
     border: none;
 } 
 
-label:focus {
-    outline: none;
-    background-color: rgba(255, 255, 255, 0);
-}
-
 body {
     background-color: rgb(24, 24, 27);
     font: normal 14pt;

@@ -7,9 +7,8 @@
     border: none;
 } 
 
-label:focus {
-    outline: none;
-    background-color: rgba(255, 255, 255, 0);
+a { /* Links */
+    color: rgb(145, 70, 255)
 }
 
 body {
@@ -41,54 +40,53 @@ body {
     margin-bottom: 3%;
 }
 
-.formulario-container {
-    width: 50%;
-    margin: 0 auto; /* margin: [vertical] [horizontal] */
+.lista-container {
+    width: 100%;
+    margin: auto auto; /* margin: [vertical] [horizontal] */
 }
 
 p {
-    padding-bottom: 15px;
-    margin-left: auto;
+    margin-left: auto; 
     margin-right: auto;
     box-sizing: border-box;
     border: none;
 }
 
-.campoF {
-    width: 100%;
-    margin-right: auto;
-    font-weight: bold;
-}
-
-.termos {
-    width: 100%;
-    margin-right: auto;
-    font-weight: lighter;
-}
-
-a { /* Links */
-    color: rgb(145, 70, 255)
-}
-
-.blocoin {
-    width: 100%;
+select{
+    background-color: rgb(45, 45, 51);
     padding: 5px;
-    border-bottom: 2px solid rgb(250, 240, 255);
-    outline: none;
-    background-color: rgba(255, 255, 255, 0);
+    border-radius: 15px;
+    width: 200px;
+    margin-left: auto;
+}
+
+.tab-container {
+    padding: 2%;
+}
+.view {
+    background-color: rgb(14, 14, 16);
+    padding: 1.5%;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25pt;
 }
 
 .cadbut {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: auto; 
     margin-left: auto;
+    margin-right: auto;
     border-radius: 20px;
     padding: 10px;
-    width: 120px;
+    width: 130px;
     background-color: rgb(145, 70, 255);
     box-sizing: border-box;
     border: none;
 }
+
+.buttonA {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
