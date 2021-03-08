@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tabela de Clientes</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <!-- TABELA DE CLIENTES -->
+    <div class="container">
+        <table class="table table-light" id="tbCliente">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Data de Nascimento</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Ações</th>
+            </tr>
+            </thead>
+
+        </table>
+
+        <!-- BOTÃO PARA VOLTAR PARA TELA DE CADASTRO -->
+        <div class="row">
+            <div class="col-xs-4 col-md-2">
+                <div class="form-group">
+                    <a href="PaginaCadastro.htm"><button class="btn btn-primary" type="submit" id="btnAdd">ADICIONAR CLIENTE</button></a>
+                </div><br>
+            </div>
+        </div>
+    </div>
+    
+    <!-- sources -->
+    
+    <script src="https://kit.fontawesome.com/82a498afb3.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/tabela.js"></script>
+</body>
+</html>

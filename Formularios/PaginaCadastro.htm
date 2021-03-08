@@ -1,0 +1,130 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    
+    <!-- FORMULARIO DE CADASTRO -->
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h1>Cadastro de Cliente</h1>
+                        <form id="formCadastro">
+                            <div class="form-group">
+                                <label for="nome">Nome:</label><span style="color: red;">*</span> <br><br>
+                                <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite seu nome...">
+                                
+                            </div><br>
+                            <div class="form-group">
+                                <label for="dataNascimento">Data de Nascimento:</label><span style="color: red;">*</span><br><br>
+                                <input class="form-control" type="date" name="dataNascimento" id="dataNascimento" >
+                            </div><br>
+                            <div class="form-group">
+                                <label for="email">E-mail:</label><span style="color: red;">*</span><br><br>
+                                <input class="form-control" type="email" name="email" id="email" placeholder="Digite o seu e-mail..." >
+                            </div><br>
+                            <div class="row">
+                                <div class="col-xs-6 col-md-6">
+                                    <div class="form-group">
+                                        <label for="numeroTelefone">Numero de Telefone:</label></span> <br><br>
+                                        <input class="form-control" type="number" name="numeroTelefone" id="numeroTelefone" placeholder="Insira seu numero de Telefone">
+                                    </div><br>
+                                </div>
+                                <div class="col-xs-6 col-md-6">
+                                    <div class="form-group">
+                                        <label for="numeroCelular">Numero de Celular:</label><span style="color: red;">*</span> <br><br>
+                                        <input class="form-control" type="number" name="numeroCelular" id="numeroCelular" placeholder="Insira seu numero de Celular" >
+                                    </div><br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-2 col-md-2">
+                                    <div class="form-group">
+                                        <button class="btn btn-primary" type="submit" id="btnAdd">ADICIONAR</button>
+                                    </div><br>
+                                </div>
+                                <div class="col-xs-4 col-md-4">
+                                    <div class="form-group">
+                                        <a href="TabelaClientes.htm"> <button class="btn btn-secondary" type="button"> CONSULTAR CLIENTES</button></a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-md-4 d-none" id="Reset">
+                                    <div class="form-group">
+                                        <button class="btn btn-danger" type="button" id='btnReset'>REDEFINIR CAMPOS</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ALERTAS -->
+
+                            <div class="alert alert-danger d-none">
+                                Preencha o campo <span id="campoErro"></span>!
+                            </div>
+                            <div class="alert alert-success d-none" role="alert">
+                                <h4 class="alert-heading">Sucesso!</h4>
+                                <p>O cliente está cadastrado!</p>
+                                <hr>
+                                <p class="mb-0">Para vizualizar a lista de clientes cadastrados basta clicar em <strong>CONSULTAR CLIENTES</strong></p>
+                            </div>
+                        </form>
+                    </div>                        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOURCES -->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="js/validacoes.js"></script>
+
+    <script>
+            $(document).ready(function(){
+
+                // FUNÇÃO PARA ENCONTRAR O VALOR DA CHAVE
+
+                function obterChave(){
+                    if (localStorage.length > 0) {
+                        let key = localStorage.length + 1;
+
+                        return JSON.stringify(key);
+                    } else {
+                        key = 1;
+
+                        return key;
+                    }
+                }
+
+                // FUNÇÃO PARA ADICIONAR OS DADOS DO FORMULÁRIO AO LOCAL STORAGE
+
+                $("#btnAdd").click(function() {
+                    key = obterChave();
+                    var nome = $('#nome').val();
+                    var dtNascimento = $('#dataNascimento').val();
+                    var email = $('#email').val();
+                    var telefone = $('#numeroTelefone').val();
+                    var celular = $('#numeroCelular').val();
+
+                    if(nome != '' && dataNascimento != '' && email != '' && celular != 0){
+                        let cliente = {nome, dtNascimento, email, telefone, celular };
+                        localStorage.setItem( key , JSON.stringify(cliente));
+                    }
+                    
+                })
+                
+
+
+            })
+    </script>
+
+</body></html>
