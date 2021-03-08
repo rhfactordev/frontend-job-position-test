@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Cliente</title>
+    <link rel="stylesheet" href="css/sequencia1.css">
+</head>
+<body>
+    <div class="container">
+        <div id="logo">
+            <img src="img/Eduardo HS.png" alt="" onclick="limpaCookie()">
+            <div id="contatos-container">
+                <p class="pCont">Email para contato: <a href="#">eduardohs29@gmail.com</a></p> 
+                <p class="pCont">
+                    Redes para contato: 
+                    <a href="https://www.linkedin.com/in/eduardo-henrique-dos-santos-1735401a2/">Linkedin</a>, 
+                    <a href="https://github.com/EduardoHS-ZWrld">Github</a>
+                </p>
+            </div>
+        </div>
+
+        <div id="cad">
+            <div class="tit">
+                <h1>
+                    Cadastre-se
+                </h1>                
+            </div>
+
+            <div class="formulario-container">
+                <p>
+                    <label for="ncomp" class="campoF">Nome Completo:</label>
+                    <input type="text" name="ncomp" id="ncomp" placeholder="Digite seu nome" class="blocoin">
+                </p>
+                
+                <p>
+                    <label for="email" class="campoF">email:</label>
+                    <input type="text" name="email" id="email" placeholder="Digite seu email" class="blocoin">
+                </p>
+
+                <p>
+                    <label for="cpf" class="campoF">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" class="blocoin">
+                </p>
+
+                <p>
+                    <label for="pass" class="campoF">Senha:</label>
+                    <input type="password" name="pass" id="pass" placeholder="Digite uma senha com mais de 5 caractéres" class="blocoin">
+                </p>
+
+                <p>
+                    <label for="cpass" class="campoF">Confirmação de Senha:</label>
+                    <input type="password" name="cpass" id="cpass" placeholder="Digite a senha novamente" class="blocoin">
+                </p>
+
+                
+                    <div class="cterm">
+                        <input type="checkbox" name="termos" class="termos">
+                        <label for="termos">Li e concordo com os <a href="#">termos de uso</a>.</label>
+                    </div> 
+                    
+                <br>
+                <div class="buttonA">
+                    <input type="button" value="Cadastrar" class="cadbut" onclick="Cadastrar(  document.getElementById('ncomp'), 
+                                                                                            document.getElementById('email'), 
+                                                                                            document.getElementById('cpf'), 
+                                                                                            document.getElementById('pass'), 
+                                                                                            document.getElementById('cpass'))"> 
+                    <input type="button" value="Avaçar" class="cadbut" onclick="Redirect(1)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/CadastroScript.js"></script>
+</body>
+</html>
