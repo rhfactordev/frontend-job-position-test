@@ -16,6 +16,7 @@ function Cadastrar(nomeEl, emailEl, cpfEl, passEl, cpasEl) {
 
     if (valid == true) {
         document.cookie = form[0] + "=" + form[1] + "-" + form[2] + "-" + form[3] + ";";
+        alert("Cliente cadastrado!")
     }
 }
 
