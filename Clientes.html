@@ -7,7 +7,7 @@
     <title>Vizualizar Clientes</title>
     <link rel="stylesheet" href="css/sequencia2.css">
 </head>
-<body>
+<body onload="buscarClientes()">
     <div class="container">
         <div id="logo">
             <!-- Logo.png centered -->
@@ -20,20 +20,32 @@
                 </h1>                
             </div>
 
-            <div class="formulario-container">
-                
-                <br>
-                <div class="besq">
-                    <input type="button" value="Cadastrar" class="cadbut" onclick="Cadastrar(  document.getElementById('ncomp'), 
-                                                                                            document.getElementById('email'), 
-                                                                                            document.getElementById('cpf'), 
-                                                                                            document.getElementById('pass'), 
-                                                                                            document.getElementById('cpass'))"> 
-                </div>
-                <div class="bdir">
-                    <input type="button" value="Avaçar" class="cadbut" onclick="Redirect()">
-                </div>
+            <div class="lista-container">
+                <p>Lista de Clientes:</p><br>
+                <select name="cList" id="cList" size=10></select>
             </div>
+
+            <div class="tab-container">
+                <table style="width:90%" class="view">
+                    <tr>
+                      <th id="tablename">   Nome Completo</th>
+                      <th id="tableemail">  email</th> 
+                      <th id="tablecpf">    CPF</th>
+                    </tr>
+                    <tr>
+                      <td id="tnome"    class="res">AAAA</td>
+                      <td id="temail"   class="res">AAAA</td>
+                      <td id="tcpf"     class="res">AAAA</td>
+                    </tr>
+                <tr>
+            </div>
+            
+            <div class="buttonA">
+                <input type="button" value="Voltar" class="cadbut" onclick="Redirect(2)">
+
+                <input type="button" value="Vizualizar" class="cadbut" onclick="viewCliente()"> 
+            </div> 
+
         </div>
     </div>
 
