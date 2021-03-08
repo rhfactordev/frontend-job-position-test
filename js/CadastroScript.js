@@ -20,26 +20,77 @@ function Cadastrar(nomeEl, emailEl, cpfEl, passEl, cpasEl) {
     }
 
     if (valid == true) {
-        document.cookie = ncomp + "=" + email + "-" + cpf + "-" + senha + "-" + csenha + ";";
+        document.cookie = ncomp + "=" + email + "-" + cpf + "-" + senha + ";";
         console.log("Cadastrado!")
     }
     console.log(document.cookie)
 }
 
-function Redirect(/* arqv */) {
-    window.location.href = "C:\Users\eduar\Documents\Códigos\CadastroCl - Estágio\frontend-job-position-test\Clientes.html";
-/*     var red = arqv.value
-    console.log(red)
-    switch (red) {
+function buscarClientes() {
+    var lista = document.getElementById('cList');
+    var carr = document.cookie.split(';'); /* Array de Clientes >> Eduardo=email@abc.com-12345678900-senhasenha*/
+    console.log(document.cookie)
+    
+    for(var i in carr) {
+        var clinfo = carr[i];
+        console.log(clinfo)
+
+        while (clinfo.charAt(0) == ' ') {
+            clinfo = clinfo.substring(1, clinfo.length);
+        }
+
+        var corte = clinfo.indexOf('=');
+        console.log(corte)
+        var nomeCl = clinfo.substring(0, corte);
+        console.log(nomeCl)
+        
+        let item = document.createElement('option')
+        item.text = nomeCl;
+        item.value = i;
+        lista.appendChild(item)
+    }
+}
+
+function viewCliente() {
+    var listaN = document.getElementById('cList')
+    var selectN = listaN.options[listaN.selectedIndex].value;
+    var carr = document.cookie.split(';'); /* Array de Clientes >> Eduardo=email@abc.com-12345678900-senhasenha*/
+    
+    for(var i in carr) {
+        var clinfo = carr[i];
+
+        while (clinfo.charAt(0) == ' ') {
+            clinfo = clinfo.substring(1, clinfo.length);
+        }
+
+        var corte = clinfo.indexOf('=');
+        var nomeCl = clinfo.substring(0, corte);
+        var infoCl = clinfo.substring(corte+1, clinfo.length)
+
+        var divInfo = infoCl.split('-');
+
+        if (selectN == i) {
+            console.log("Correto");
+            document.getElementById('tnome').innerText = nomeCl;
+            document.getElementById('temail').innerText = divInfo[0];
+            document.getElementById('tcpf').innerText = divInfo[1];
+        }
+
+    }
+}
+
+function Redirect(arqv) {
+    console.log(arqv)
+    switch (arqv) {
         case 1:
-            window.location.href = "C:\Users\eduar\Documents\Códigos\CadastroCl - Estágio\frontend-job-position-test\Clientes.html";
+            window.location.href = "Clientes.html";
             break;
         case 2:
-            window.location.href = "C:\Users\eduar\Documents\Códigos\CadastroCl - Estágio\frontend-job-position-test\Cadastro.html";
+            window.location.href = "Cadastro.html";
             break;
         default:
             break;
-    } */
+    }
     
 }
 
