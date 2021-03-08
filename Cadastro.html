@@ -10,7 +10,15 @@
 <body>
     <div class="container">
         <div id="logo">
-            <!-- Logo.png centered -->
+            <img src="img/Eduardo HS.png" alt="">
+            <div id="contatos-container">
+                <p class="pCont">Email para contato: <a href="#">eduardohs29@gmail.com</a></p> 
+                <p class="pCont">
+                    Redes para contato: 
+                    <a href="https://www.linkedin.com/in/eduardo-henrique-dos-santos-1735401a2/">Linkedin</a>, 
+                    <a href="https://github.com/EduardoHS-ZWrld">Github</a>
+                </p>
+            </div>
         </div>
 
         <div id="cad">
@@ -46,20 +54,19 @@
                     <input type="password" name="cpass" id="cpass" placeholder="Digite a senha novamente" class="blocoin">
                 </p>
 
-                <p>
-                    <input type="checkbox" name="termos" class="termos">
-                    <label for="termos">Li e concordo com os <a href="#">termos de uso</a>.</label>
-                </p>
-
+                
+                    <div class="cterm">
+                        <input type="checkbox" name="termos" class="termos">
+                        <label for="termos">Li e concordo com os <a href="#">termos de uso</a>.</label>
+                    </div> 
+                    
                 <br>
-                <div class="besq">
+                <div class="buttonA">
                     <input type="button" value="Cadastrar" class="cadbut" onclick="Cadastrar(  document.getElementById('ncomp'), 
                                                                                             document.getElementById('email'), 
                                                                                             document.getElementById('cpf'), 
                                                                                             document.getElementById('pass'), 
                                                                                             document.getElementById('cpass'))"> 
-                </div>
-                <div class="bdir">
                     <input type="button" value="Avaçar" class="cadbut" onclick="Redirect(1)">
                 </div>
             </div>

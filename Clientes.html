@@ -10,10 +10,19 @@
 <body onload="buscarClientes()">
     <div class="container">
         <div id="logo">
-            <!-- Logo.png centered -->
+            <img src="img/Eduardo HS.png" alt="">
+            <div id="contatos-container">
+                <p>Email para contato: <a href="#">eduardohs29@gmail.com</a></p> 
+                <p>
+                    Redes para contato: 
+                    <a href="https://www.linkedin.com/in/eduardo-henrique-dos-santos-1735401a2/">Linkedin</a>, 
+                    <a href="https://github.com/EduardoHS-ZWrld">Github</a>
+                </p>
+            </div>
         </div>
 
-        <div id="cad">
+        <div id="vizua-container">
+        
             <div class="tit">
                 <h1>
                     Escolha o Cliente
@@ -22,30 +31,31 @@
 
             <div class="lista-container">
                 <p>Lista de Clientes:</p><br>
-                <select name="cList" id="cList" size=10></select>
+                <select name="cList" id="cList" size=13></select>
             </div>
 
             <div class="tab-container">
-                <table style="width:90%" class="view">
+                <table class="view">
                     <tr>
-                      <th id="tablename">   Nome Completo</th>
-                      <th id="tableemail">  email</th> 
-                      <th id="tablecpf">    CPF</th>
+                    <th id="tablename">   Nome Completo</th>
+                    <th id="tableemail">  email</th> 
+                    <th id="tablecpf">    CPF</th>
                     </tr>
                     <tr>
-                      <td id="tnome"    class="res">AAAA</td>
-                      <td id="temail"   class="res">AAAA</td>
-                      <td id="tcpf"     class="res">AAAA</td>
+                    <td id="tnome"    class="res">AAAA</td>
+                    <td id="temail"   class="res">AAAA</td>
+                    <td id="tcpf"     class="res">AAAA</td>
                     </tr>
                 <tr>
             </div>
             
+            <br>
+
             <div class="buttonA">
                 <input type="button" value="Voltar" class="cadbut" onclick="Redirect(2)">
 
                 <input type="button" value="Vizualizar" class="cadbut" onclick="viewCliente()"> 
-            </div> 
-
+            </div>
         </div>
     </div>
 
