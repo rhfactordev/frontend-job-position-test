@@ -1,33 +1,51 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: Helvetica, sans-serif;
     color: rgb(250, 240, 255);
+    box-sizing: border-box;
     border: none;
 } 
-
-a { /* Links */
-    color: rgb(145, 70, 255)
-}
 
 body {
     background-color: rgb(24, 24, 27);
     font: normal 14pt;
 }
 
+p {
+    margin-left: auto; 
+    margin-right: auto;
+    box-sizing: border-box;
+    border: none;
+}
+
+a { /* Links */
+    color: #6441A5;
+}
+
+img {
+    margin-left: auto;
+    margin-left: auto;
+}
+
 .container {
     display: flex;
     flex-direction: row; 
-    height: 95vh;
+    height: 100vh;
     padding: 1%;
 }
 
-#logo { /* Imagem para ser adicionada depois */
+#logo { 
     width: 400px;
+    margin: auto auto;
 }
 
-#cad {
+#contato-container {
+    padding: 5%;
+    
+}
+
+#vizua-container {
     flex: 1;
     background: rgb(31, 31, 35);
     border-radius: 10px; /*Deixa a borda da seção arredondada*/
@@ -41,35 +59,36 @@ body {
 }
 
 .lista-container {
-    width: 100%;
-    margin: auto auto; /* margin: [vertical] [horizontal] */
-}
-
-p {
-    margin-left: auto; 
-    margin-right: auto;
-    box-sizing: border-box;
-    border: none;
+    width: 50%; 
 }
 
 select{
     background-color: rgb(45, 45, 51);
     padding: 5px;
     border-radius: 15px;
-    width: 200px;
-    margin-left: auto;
+    width: 50%;
 }
 
 .tab-container {
     padding: 2%;
 }
+
+table {
+    width:  90%;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
 .view {
     background-color: rgb(14, 14, 16);
     padding: 1.5%;
     border-radius: 15px;
+    height: 25pt;
     margin-left: auto;
     margin-right: auto;
-    height: 25pt;
 }
 
 .cadbut {
@@ -80,7 +99,7 @@ select{
     border-radius: 20px;
     padding: 10px;
     width: 130px;
-    background-color: rgb(145, 70, 255);
+    background-color: #6441A5;
     box-sizing: border-box;
     border: none;
 }
@@ -89,4 +108,5 @@ select{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 3.1%;
 } 
